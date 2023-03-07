@@ -26,7 +26,7 @@ export default function Contact() {
         message,
       }),
     })
-      .then(() => alert("Sent. Thank you for your message!"))
+      .then(() => alert("/thank-you/"))
       .catch((error) => alert(error));
   }
 
@@ -40,7 +40,8 @@ export default function Contact() {
           </h1>
           <form
             netlify
-            name="contact"
+                      name="contact"
+                      action="/pages/success"
             method="post"
             onSubmit={handleSubmit}
             className="flex flex-col mx-auto text-center  w-2/3 mt-8"
