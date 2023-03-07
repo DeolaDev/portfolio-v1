@@ -38,7 +38,8 @@ export default function Contact() {
           <h1 className="sm:text-4xl text-3xl font-medium font-heading text-secondary-accent-color mb-4">
             I'd love to chat ...
           </h1>
-          <form
+                  <form
+                      netlify
             name="contact"
             method="post"
             onSubmit={handleSubmit}
