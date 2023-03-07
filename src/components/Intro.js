@@ -1,6 +1,4 @@
 import Typing from "../effects/Typing";
-
-import { ArrowDownCircleIcon } from "@heroicons/react/24/solid";
 import MyResume from "../docs/AdeolaAdegoke-Resume.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";

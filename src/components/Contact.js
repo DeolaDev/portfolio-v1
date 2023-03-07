@@ -19,7 +19,12 @@ export default function Contact() {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "Portfolio Contact Form", name, email, message }),
+      body: encode({
+        "form-name": "Portfolio Contact Form",
+        name,
+        email,
+        message,
+      }),
     })
       .then(() => alert("Sent. Thank you for your message!"))
       .catch((error) => alert(error));
@@ -34,11 +39,12 @@ export default function Contact() {
             I'd love to chat ...
           </h1>
           <form
-            netlify
-            name="test"
+            name="contact"
+            method="post"
             onSubmit={handleSubmit}
             className="flex flex-col mx-auto text-center  w-2/3 mt-8"
           >
+            <input type="hidden" name="form-name" value="contact" />
             <div className="relative mb-4">
               <label
                 htmlFor="name"
