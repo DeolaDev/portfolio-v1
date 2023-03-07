@@ -20,7 +20,7 @@ export default function Contact() {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": "Portfolio Contact Form",
+        "form-name": "contact",
         name,
         email,
         message,
@@ -38,8 +38,8 @@ export default function Contact() {
           <h1 className="sm:text-4xl text-3xl font-medium font-heading text-secondary-accent-color mb-4">
             I'd love to chat ...
           </h1>
-                  <form
-                      netlify
+          <form
+            netlify
             name="contact"
             method="post"
             onSubmit={handleSubmit}
