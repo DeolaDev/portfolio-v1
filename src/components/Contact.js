@@ -1,6 +1,5 @@
 import React from "react";
 import { ChatBubbleBottomCenterIcon } from "@heroicons/react/24/solid";
-import { Navigate } from "react-router-dom";
 
 export default function Contact() {
   const [name, setName] = React.useState("");
@@ -15,6 +14,7 @@ export default function Contact() {
       .join("&");
   }
 
+  /* Function to process form submission */
   function handleSubmit(e) {
     e.preventDefault();
     fetch("/", {
@@ -39,14 +39,17 @@ export default function Contact() {
           <h1 className="sm:text-4xl text-3xl font-medium font-heading text-secondary-accent-color mb-4">
             I'd love to chat ...
           </h1>
+
+          {/* Using Netlify forms: Add netlify tag*/}
+          {/* Trigger the handleSubmit function when user clicks on the submit button */}
           <form
             netlify
             name="contact"
-            action="./pages/success.html"
             method="post"
             onSubmit={handleSubmit}
             className="flex flex-col mx-auto text-center  w-2/3 mt-8"
           >
+            {/*hidden input required for Netlify forms */}
             <input type="hidden" name="form-name" value="contact" />
             <div className="relative mb-4">
               <label

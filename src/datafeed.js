@@ -1,3 +1,5 @@
+/* Mobile menu button */
+
 export const skills = [
   "HTML5",
   "CSS",

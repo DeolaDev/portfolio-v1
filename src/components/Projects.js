@@ -22,9 +22,11 @@ export default function Projects() {
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
+          {/* Loop through the 'projects' array in the datafeed.js file */}
           {projects.map((project) => (
             <div className="sm:w-1/2 w-100 p-4">
               <div className="flex relative">
+                {/*Using the responsive Card component to dislay each project */}
                 <Card className="bg-navbar-color border-2 border-secondary-accent-color">
                   <CardHeader floated={false} className="h-80">
                     <img
@@ -73,14 +75,3 @@ export default function Projects() {
     </section>
   );
 }
-
-<Card className="w-100">
-  <CardBody className="text-center">
-    <Typography variant="h4" color="blue-gray" className="mb-2">
-      Natalie Paisley
-    </Typography>
-    <Typography color="blue" className="font-medium" textGradient>
-      CEO / Co-Founder
-    </Typography>
-  </CardBody>
-</Card>;
