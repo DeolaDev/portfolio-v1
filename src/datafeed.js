@@ -41,4 +41,14 @@ export const projects = [
     github: "https://github.com/DeolaDev/rate-books-app-graphql",
     link: " https://main.d2zdr4h8jx6b5p.amplifyapp.com",
   },
+  {
+    title: "WORDPRESS BLOG",
+    toolstack: "Wordpress | HTML | CSS | PHP",
+    description:
+      "A feature-rich wordpress website with email marketing integration",
+    image: "./WordpressBlog.gif",
+    alt: "Adeola - Book Rating App",
+    github: "https://thebodaciousyou.com/",
+    link: "https://thebodaciousyou.com/",
+  },
 ];
