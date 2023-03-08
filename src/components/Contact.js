@@ -1,7 +1,7 @@
 import React from "react";
 import { ChatBubbleBottomCenterIcon } from "@heroicons/react/24/solid";
 
-export default function Contact2() {
+export default function Contact() {
   return (
     <section id="contact">
       <div className="container py-32 mx-auto text-center lg:px-40  ">
