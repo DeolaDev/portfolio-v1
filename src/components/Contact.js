@@ -13,9 +13,9 @@ export default function Contact() {
 
           {/* Using Netlify forms: Add netlify tag*/}
           <form
-            netlify
+            data-netlify="true"
             name="contact"
-            action="/components/thankyou"
+            action="/pages/thankyou"
             method="POST"
             onSubmit="submit"
             className="flex flex-col mx-auto text-center  w-2/3 mt-8"
