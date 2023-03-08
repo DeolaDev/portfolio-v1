@@ -1,36 +1,7 @@
 import React from "react";
 import { ChatBubbleBottomCenterIcon } from "@heroicons/react/24/solid";
 
-export default function Contact() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
-
-  function encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  }
-
-  /* Function to process form submission */
-  function handleSubmit(e) {
-    e.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "contact",
-        name,
-        email,
-        message,
-      }),
-    })
-      .then(() => alert("Sent. Thank you for your message"))
-      .catch((error) => alert(error));
-  }
-
+export default function Contact2() {
   return (
     <section id="contact">
       <div className="container py-32 mx-auto text-center lg:px-40  ">
@@ -41,12 +12,11 @@ export default function Contact() {
           </h1>
 
           {/* Using Netlify forms: Add netlify tag*/}
-          {/* Trigger the handleSubmit function when user clicks on the submit button */}
           <form
             netlify
             name="contact"
             method="post"
-            onSubmit={handleSubmit}
+            onSubmit="submit"
             className="flex flex-col mx-auto text-center  w-2/3 mt-8"
           >
             {/*hidden input required for Netlify forms */}
@@ -64,7 +34,6 @@ export default function Contact() {
                 name="name"
                 className="w-full bg-navbar-color rounded border border-secondary-accent-color focus:border-accent-color text-base outline-none text-secondary-accent-color py-1 px-3 leading-8"
                 required
-                onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className="relative mb-4">
@@ -79,7 +48,6 @@ export default function Contact() {
                 id="email"
                 name="email"
                 className="w-full bg-navbar-color rounded border border-secondary-accent-color focus:border-accent-color text-base outline-none text-secondary-accent-color py-1 px-3 leading-8"
-                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="relative mb-4">
@@ -94,7 +62,6 @@ export default function Contact() {
                 name="message"
                 className="w-full bg-navbar-color rounded border border-secondary-accent-color focus:border-accent-color text-base outline-none text-secondary-accent-color py-1 px-3 leading-8"
                 required
-                onChange={(e) => setMessage(e.target.value)}
               />
             </div>
             <button
