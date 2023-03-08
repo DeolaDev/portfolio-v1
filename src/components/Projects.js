@@ -1,11 +1,7 @@
 import { CommandLineIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { projects } from "../datafeed";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-} from "@material-tailwind/react";
+import { Card, CardHeader, CardBody } from "@material-tailwind/react";
 
 export default function Projects() {
   return (
@@ -30,7 +26,7 @@ export default function Projects() {
                   <CardHeader floated={false} className="h-80">
                     <img
                       alt="gallery"
-                      className="absolute w-100 h-full object-cover object-center"
+                      className="absolute w-full h-full object-cover object-center"
                       src={project.image}
                     />
                     <div className="px-8 py-10 relative z-10 h-full bg-navbar-color opacity-0 hover:opacity-100">
@@ -46,27 +42,26 @@ export default function Projects() {
                       </p>
                     </div>
                   </CardHeader>
-                  
-                    <CardBody className="text-center mt-4 mb-4">
-                      <a
-                        href={project.link}
-                        className="mb-2 font-medium font-body text-accent-color hover:text-secondary-accent-color underline underline-offset-8 decoration-1 decoration-secondary-accent-color hover:decoration-accent-color mr-10"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Live Site
-                      </a>
 
-                      <a
-                        href={project.github}
-                        className="mb-2 font-medium font-body text-accent-color hover:text-secondary-accent-color underline underline-offset-8 decoration-1 decoration-secondary-accent-color hover:decoration-accent-color ml-10 inline-block"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Github
-                      </a>
-                    </CardBody>
-                  
+                  <CardBody className="text-center mt-4 mb-4">
+                    <a
+                      href={project.link}
+                      className="mb-2 font-medium font-body text-accent-color hover:text-secondary-accent-color underline underline-offset-8 decoration-1 decoration-secondary-accent-color hover:decoration-accent-color mr-10"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Live Site
+                    </a>
+
+                    <a
+                      href={project.github}
+                      className="mb-2 font-medium font-body text-accent-color hover:text-secondary-accent-color underline underline-offset-8 decoration-1 decoration-secondary-accent-color hover:decoration-accent-color ml-10 inline-block"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Github
+                    </a>
+                  </CardBody>
                 </Card>
               </div>
             </div>
