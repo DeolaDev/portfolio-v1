@@ -45,7 +45,7 @@ export const projects = [
     title: "WORDPRESS BLOG",
     toolstack: "Wordpress | HTML | CSS | PHP",
     description:
-      "A feature-rich wordpress website with email marketing integration",
+      "A beautifully designed and feature-rich wordpress website with email marketing integration",
     image: "./WordpressBlog.gif",
     alt: "Adeola - Book Rating App",
     github: "https://thebodaciousyou.com/",
