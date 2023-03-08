@@ -2,14 +2,13 @@ import React from "react";
 import { ChatBubbleBottomCenterIcon } from "@heroicons/react/24/solid";
 
 export default function Contact() {
-  
   return (
     <section id="contact">
       <div className="container py-32 mx-auto text-center lg:px-40  ">
         <div className="flex flex-col w-full mb-20">
           <ChatBubbleBottomCenterIcon className="mx-auto inline-block w-10 mb-4" />
           <h1 className="sm:text-4xl text-3xl font-medium font-heading text-secondary-accent-color mb-4">
-            I'd love to chat ...
+            I'd love to chat
           </h1>
 
           {/* Using Netlify forms: Add netlify tag*/}
@@ -17,7 +16,6 @@ export default function Contact() {
             data-netlify="true"
             name="contact"
             method="POST"
-            action="/pages/thankyou"
             onSubmit="submit"
             className="flex flex-col mx-auto text-center  w-2/3 mt-8"
           >
