@@ -30,7 +30,6 @@ export default function Contact() {
           <form
             data-netlify="true"
             name="contact"
-            action="/pages/thankyou"
             method="POST"
             onSubmit="{submitHandler}"
             className="flex flex-col mx-auto text-center  w-2/3 mt-8"
