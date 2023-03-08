@@ -15,7 +15,7 @@ export default function Contact() {
           <form
             netlify
             name="contact"
-            action="/components/thankyou/"
+            action="/components/thankyou"
             method="POST"
             onSubmit="submit"
             className="flex flex-col mx-auto text-center  w-2/3 mt-8"
