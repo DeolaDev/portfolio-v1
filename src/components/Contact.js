@@ -1,22 +1,8 @@
 import React from "react";
 import { ChatBubbleBottomCenterIcon } from "@heroicons/react/24/solid";
-import { useNavigate } from "react-router-dom";
 
 export default function Contact() {
-  let navigate = useNavigate();
-  const submitHandler = (e) => {
-    e.preventDefault();
-    let myForm = document.getElementById("contact-form");
-    let formData = new FormData(myForm);
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => navigate("/pages/thankyou"))
-      .catch((error) => alert(error));
-  };
-
+  
   return (
     <section id="contact">
       <div className="container py-32 mx-auto text-center lg:px-40  ">
@@ -31,7 +17,8 @@ export default function Contact() {
             data-netlify="true"
             name="contact"
             method="POST"
-            onSubmit="{submitHandler}"
+            action="/pages/thankyou"
+            onSubmit="submit"
             className="flex flex-col mx-auto text-center  w-2/3 mt-8"
           >
             {/*hidden input required for Netlify forms */}
